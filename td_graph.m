@@ -8,11 +8,14 @@ plot3(y1, y2, y3, 'LineWidth', 2, 'Color', [0.1, 0.7, 0.3]);
 grid on;
 
 title('3D Parametric Plot of sin(t), cos(t), and t', 'FontSize', 14, 'FontWeight', 'bold');
+xlabel('sin(t)');
+ylabel('cos(t)');
+zlabel('t');
 
 % Setting limits for the axes
 xlim([-2, 2]);
 ylim([-2, 2]);
-zlim([0, max(y3)+5]);
+zlim([min(y3), max(y3)+5]);
 
 % Setting a custom view angle
 view(60, 22.5);

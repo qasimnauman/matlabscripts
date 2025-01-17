@@ -1,0 +1,39 @@
+% Input matrices P and Q
+P = input('Enter matrix P (e.g., [1,2;3,4]): ');
+Q = input('Enter matrix Q (e.g., [5,6;7,8]): ');
+
+% 1. Sum of P and Q
+if size(P) == size(Q)
+    sumPQ = P + Q;
+    disp('Sum of P and Q:');
+    disp(sumPQ);
+else
+    disp('Error: P and Q must have the same size for addition.');
+end
+
+% 2. Element-wise multiplication of P and Q
+if size(P) == size(Q)
+    elemMultPQ = P .* Q; % Use ".*" for element-wise multiplication
+    disp('Element-wise multiplication of P and Q:');
+    disp(elemMultPQ);
+else
+    disp('Error: P and Q must have the same size for element-wise multiplication.');
+end
+
+% 3. Trace of P
+if(size(A) == size(B))
+    traceP = trace(P); % Trace is the sum of the diagonal elements
+else
+    disp
+disp('Trace of P:');
+disp(traceP);
+
+% 4. Check if P is symmetric and, if so, compute eigenvalues
+if issymmetric(P)
+    disp('Matrix P is symmetric.');
+    eigenvaluesP = eig(P); % Compute eigenvalues
+    disp('Eigenvalues of P:');
+    disp(eigenvaluesP);
+else
+    disp('Matrix P is not symmetric.');
+end
